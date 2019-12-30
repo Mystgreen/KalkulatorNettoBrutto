@@ -1,0 +1,40 @@
+using System;
+
+class Program
+{
+    public static void Main()
+    {
+        
+        Console.WriteLine("Witaj w kalkulatorze zarobków Marcina");
+        Console.Write(Environment.NewLine);
+        Console.WriteLine("Podaj kwotę twoich zarobków");
+        string wprowadzonaKwota = Console.ReadLine();
+        int i = int.Parse(wprowadzonaKwota);
+        
+        Console.WriteLine("Twoje zarobki wynoszą: " + wprowadzonaKwota + "zł");
+        Console.Write(Environment.NewLine);
+        Console.WriteLine("Czy podana kwota jest kwotą Netto czy Brutto?");
+        Console.WriteLine("Jeśli jest to kwota Netto, wpisz: 1");
+        Console.WriteLine("Jeśli jest to kwota Brutto wpisz: 2");
+        string wprowadzonyTypKwoty = Console.ReadLine();
+        int typKwoty = int.Parse(wprowadzonyTypKwoty);
+        
+
+        if (typKwoty == 1)
+        {
+            float Netto = i * 1.23F;
+            Console.WriteLine("Twoje zarobki Brutto wynoszą: " + Netto + "zł");
+        }
+        else if (typKwoty == 2)
+        {
+            float Brutto = i / 1.23F;
+            Console.WriteLine("Twoje zarobki Netto wynoszą: " + Brutto + "zł");
+        }
+        else
+        {
+            Console.WriteLine("Niepoprawnie podano czy kwota jest Netto czy Brutto");
+        }
+        Console.ReadKey();
+    }
+    
+}
